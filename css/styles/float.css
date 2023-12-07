@@ -1,0 +1,14 @@
+.wrapper {
+  border: blueviolet 2px solid;
+}
+
+.item {
+  float: left;
+  background-color: aqua;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
