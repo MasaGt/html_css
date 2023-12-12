@@ -4,7 +4,7 @@
 
 - align-items
 ```css
-.flex-item {
+.flex-container {
     /* (デフォルト) flex containerの高さいっぱい使う */
     align-items: stretch;
     /* アイテムをベースラインに沿って配置 */
