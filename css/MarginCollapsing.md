@@ -81,11 +81,4 @@
 
 結果: マージンの相殺は解消されない
 
-<div class="wrapper">
-    <div class="parent">
-        <div>other item</div>
-    </div>
-    <div class="parent">
-        <div class="child">child</div>
-    </div>
-</div>
+<img src="./img/margin-collapsing4.png" />
