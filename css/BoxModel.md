@@ -46,8 +46,7 @@
 }
 ```
 
-<div class="box1">box1</div>
-<div class="box2">box2</div>
+<img src="./img/box-model2.png" />
 
 *box1の全体のheigtは100px + paddingの20px = 120px  
 widthは200px + paddingの20px = 220px  
