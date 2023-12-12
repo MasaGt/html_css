@@ -77,8 +77,4 @@
 }
 ```
 
-<div class="container">
-    <div class="on-the-left">item1</div>
-    <div class="on-the-right">item2</div>
-    <div class="in-the-middle">item3</div>
-</div>
+<img src="./img/flexbox-order.png" />

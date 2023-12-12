@@ -33,11 +33,7 @@
 }
 ```
 
-<div class="container">
-    <div class="items">item1</div>
-    <div class="items">item2</div>
-    <div class="items">item3</div>
-</div>
+<img src="./img/flexbox1.png" />
 
 *しかし余白(グレー)が余る  
 flexboxはこの余白を自由に配分することができるらしい
@@ -103,11 +99,7 @@ flexboxはこの余白を自由に配分することができるらしい
 ```
 *flex-basisをautoにすると,その要素の元々の幅になる
 
-<div class="container">
-    <div class="container_item1">item1</div>
-    <div class="container_item2">item2</div>
-    <div class="container_item3">item3</div>
-</div>
+<img src="./img/flexbox2.png" />
 
 要素の大きさを均等にしたければflex-growを同じ数値にする
 ```css
@@ -119,11 +111,7 @@ flexboxはこの余白を自由に配分することができるらしい
 }
 ```
 
-<div class="container">
-    <div class="container_items">item1</div>
-    <div class="container_items">item2</div>
-    <div class="container_items">item3</div>
-</div>
+<img src="./img/flexbox3.png">
 
 ---
 
@@ -164,30 +152,12 @@ flexboxはこの余白を自由に配分することができるらしい
 ```
 
 - flex-wrap: wrap;
-<div class="container2">
-    <div class="container2_items">item1</div>
-    <div class="container2_items">item2</div>
-    <div class="container2_items">item3</div>
-    <div class="container2_items">item4</div>
-    <div class="container2_items">item5</div>
-    <div class="container2_items">item6</div>
-    <div class="container2_items">item7</div>
-    <div class="container2_items">item8</div>
-    <div class="container2_items">item9</div>
-</div>
+
+<img src="./img/flex-wrap1.png" />
 
 - flex-wrap: wrap-reverse
-<div class="container3">
-    <div class="container2_items">item1</div>
-    <div class="container2_items">item2</div>
-    <div class="container2_items">item3</div>
-    <div class="container2_items">item4</div>
-    <div class="container2_items">item5</div>
-    <div class="container2_items">item6</div>
-    <div class="container2_items">item7</div>
-    <div class="container2_items">item8</div>
-    <div class="container2_items">item9</div>
-</div>
+
+<img src="./img/flex-wrap2.png" />
 
 ---
 
@@ -214,53 +184,32 @@ flexboxはこの余白を自由に配分することができるらしい
 
 
 - justify-content: flex-end
-<div class="flex-end container">
-    <div class="justified-items">item1</div>
-    <div class="justified-items">item2</div>
-    <div class="justified-items">item3</div>
-    <div class="justified-items">item4</div>
-</div>
+
+<img src="./img/justify-content1.png" />
 
 <br>
 
 - justify-content: center
-<div class="center container">
-    <div class="justified-items">item1</div>
-    <div class="justified-items">item2</div>
-    <div class="justified-items">item3</div>
-    <div class="justified-items">item4</div>
-</div>
+
+<img src="./img/justify-content2.png" />
 
 <br>
 
 - justify-content: space-between
-<div class="space-between container">
-    <div class="justified-items">item1</div>
-    <div class="justified-items">item2</div>
-    <div class="justified-items">item3</div>
-    <div class="justified-items">item4</div>
-</div>
+
+<img src="./img/justify-content3.png" />
 
 <br>
 
 - justify-content: space-around
-<div class="space-around container">
-    <div class="justified-items">item1</div>
-    <div class="justified-items">item2</div>
-    <div class="justified-items">item3</div>
-    <div class="justified-items">item4</div>
-</div>
+
+<img src="./img/justify-content4.png" />
 
 <br>
 
 - justify-content: space-evenly
-<div class="space-evenly container">
-    <div class="justified-items">item1</div>
-    <div class="justified-items">item2</div>
-    <div class="justified-items">item3</div>
-    <div class="justified-items">item4</div>
-</div>
 
+<img src="./img/justify-content5.png" />
 
 <br>
 
