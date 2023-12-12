@@ -44,14 +44,7 @@ selecter::nth-of-type(n)
 }
 ```
 
-<ul class="list">
-    <li class="items">item1</li>
-    <li class="items">item2</li>
-    <li class="items">item3</li>
-    <li class="items">item4</li>
-    <li class="items">item5</li>
-    <li class="items">item6</li>
-</ul>
+<img src="./img/pseudo-class1.png" />
 
 他の指定方法として、3つおきにスタイルを適用するには :nth-of-type(3n) などがある
 
@@ -79,9 +72,4 @@ selecter::nth-of-type(n)
 }
 ```
 
-<p class="paragraphs">paragrapg1</p>
-<h1 class="heading">heading1</h1>
-<p class="paragraphs">paragrapg2</p>
-<p class="paragraphs">paragrapg3</p>
-<span class="desc">desc1</span>
-<p class="paragraphs">paragrapg4</p>
+<img src="./img/pseudo-class2.png" />
