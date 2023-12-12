@@ -1,4 +1,4 @@
-<link href="https://github.com/MasaGt/html_css/tree/main/css/styles/transform.css" 
+<link href="https://github.com/MasaGt.github.io/html_css/tree/main/css/styles/transform.css" 
 rel="stylesheet"></link>
 
 ### transformプロパティとは
