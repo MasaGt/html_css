@@ -258,6 +258,73 @@ a:active {
   width: 275px;
 }
 
+/* Ranking section */
+.ranking {
+  counter-reset: ranking;
+  list-style-type: none;
+  margin-top: 30px;
+}
+.ranking .ranking-items {
+  margin-top: 15px;
+}
+.ranking .ranking-items a {
+  align-items: center;
+  display: flex;
+  transition: opacity 0.15s;
+}
+.ranking .ranking-items a:hover {
+  opacity: 0.8;
+}
+.ranking-items .image {
+  height: 55px;
+  width: 55px;
+}
+.ranking-items .text {
+  color: #000;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  vertical-align: top;
+  width: 182px;
+}
+.ranking-items .order {
+  border: 1px solid #ccc;
+  color: #aaa;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 0 10px;
+  text-align: center;
+  transform: rotate(45deg);
+  height: 18px;
+  width: 18px;
+}
+.ranking .ranking-items:nth-of-type(1) .order,
+.ranking .ranking-items:nth-of-type(2) .order,
+.ranking .ranking-items:nth-of-type(3) .order {
+  border: none;
+  color: #fff;
+  font-weight: normal;
+  line-height: 18px;
+}
+
+.ranking .ranking-items:nth-of-type(1) .order {
+  background-color: #dab413;
+}
+.ranking .ranking-items:nth-of-type(2) .order {
+  background-color: #6e7b84;
+}
+.ranking .ranking-items:nth-of-type(3) .order {
+  background-color: #a0541a;
+}
+.ranking-items .order::before {
+  content: counter(ranking);
+  counter-increment: ranking;
+  display: inline-block;
+  font-size: 1rem;
+  transform: rotate(-45deg);
+}
+
 .footer {
   width: 100%;
 }
