@@ -1,5 +1,3 @@
-<link href="./styles/float.css" rel="stylesheet"></link>
-
 ### Float使用時の注意点
 
 - floatwを適用した要素は親要素の高さに影響を与えなくなるので、親の高さが0になってしまうことがよくある
@@ -20,9 +18,7 @@
 }
 ```
 
-<div class="wrapper">
-    <div class="item">item</div>
-</div>
+<img src="./img/float1.png" />
 
 ---
 
@@ -50,7 +46,6 @@
     clear: both;
 }
 ```
-<div class="wrapper clear">
-    <div class=item>item</div>
-</div>
+
+<img src="./img/float2.png" />
 
