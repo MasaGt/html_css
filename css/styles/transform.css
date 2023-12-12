@@ -1,0 +1,6 @@
+.container1 {
+  background-color: lightcoral;
+}
+.container1:hover {
+  scale: (2, 1);
+}
