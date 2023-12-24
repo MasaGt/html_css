@@ -1,0 +1,25 @@
+/* universal style */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f6f7fb;
+  color: #333;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.2rem;
+  padding: 30px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+}
