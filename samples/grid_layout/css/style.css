@@ -23,3 +23,56 @@ a:active,
 a:hover {
   text-decoration: none;
 }
+
+/* small tile */
+.items {
+  background-color: #fff;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  margin-bottom: 4px;
+  padding: 8px;
+  width: 180px;
+}
+
+.items > a {
+  /* リンクテキストの色を上書き (文字色をitemsに当ててもitemsは以下のaタグの文字色は変わらない) */
+  color: #777;
+  display: block;
+  border-radius: inherit;
+  margin: -8px;
+  padding: 8px;
+  transition: all 0.3;
+}
+
+.items > a:hover {
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+
+.images {
+  display: block;
+  width: 100%;
+}
+
+.items .categories {
+  color: #aaa;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  letter-spacing: 1px;
+  margin: 15px 9px 10px;
+}
+
+.categories::before {
+  border: 2px solid;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: -5px;
+  height: 19px;
+  width: 19px;
+}
+
+.items .desc {
+  margin: 10px;
+  line-height: 1.5rem;
+}
