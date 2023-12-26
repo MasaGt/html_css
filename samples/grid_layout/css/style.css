@@ -25,9 +25,12 @@ a:hover {
 }
 
 .container {
-  /* columns: 4; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* feature property */
+  /* grid-template-rows: masonry; */
+  justify-items: center;
+  row-gap: 8px;
 }
 
 /* small tile */
@@ -35,9 +38,8 @@ a:hover {
   background-color: #fff;
   border-bottom: 3px solid;
   border-radius: 5px;
-  margin-bottom: 4px;
   padding: 8px;
-  width: 180px;
+  height: max-content;
 }
 
 .items > a {
@@ -101,4 +103,23 @@ a:hover {
 .item-break-time,
 .item-break-time .categories::before {
   border-color: #c1efff;
+}
+
+/* small tile */
+.item-s {
+  grid-row: span 1;
+  width: 180px;
+}
+
+/* medium tile */
+.item-m {
+  grid-column: span 2;
+  width: 364px;
+}
+
+/* large tile */
+.item-l {
+  grid-column: span 4;
+  grid-row: span 2;
+  width: 732px;
 }
