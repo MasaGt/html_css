@@ -24,6 +24,12 @@ a:hover {
   text-decoration: none;
 }
 
+.container {
+  /* columns: 4; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
 /* small tile */
 .items {
   background-color: #fff;
@@ -75,4 +81,24 @@ a:hover {
 .items .desc {
   margin: 10px;
   line-height: 1.5rem;
+}
+
+.item-main-dish,
+.item-main-dish .categories::before {
+  border-color: #ffc0cb;
+}
+
+.item-appetizer,
+.item-appetizer .categories::before {
+  border-color: #76c047;
+}
+
+.item-column,
+.item-column .categories::before {
+  border-color: #fff100;
+}
+
+.item-break-time,
+.item-break-time .categories::before {
+  border-color: #c1efff;
 }
