@@ -24,6 +24,51 @@ a:hover {
   text-decoration: none;
 }
 
+/* header */
+.header {
+  background-color: #fff;
+  text-align: center;
+  width: 180px;
+}
+
+.header .logo {
+  border-radius: 50%;
+  transition: transform 0.5s;
+  height: 136px;
+  width: 136px;
+}
+
+.header .logo:hover {
+  transform: rotate(-360deg);
+}
+
+/* navigation */
+.navi .navi-items {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.navi .navi-items > a {
+  color: #7c5119;
+  display: inline-block;
+}
+
+.navi .navi-items a::after {
+  border-bottom: 1px solid #7c5119;
+  content: "";
+  display: block;
+  margin: 6px auto 0;
+  transition: 0.3s ease-in-out;
+  width: 0%;
+}
+
+.navi .navi-items a:hover::after {
+  width: 100%;
+}
+
+/* grid container */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -33,7 +78,7 @@ a:hover {
   row-gap: 8px;
 }
 
-/* small tile */
+/* tiles */
 .items {
   background-color: #fff;
   border-bottom: 3px solid;
