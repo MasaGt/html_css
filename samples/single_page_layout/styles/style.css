@@ -190,4 +190,38 @@ body {
 .grid-items:nth-child(odd)::after {
   top: 0;
 }
-/* In each works at odd numbers, image comes first */
+
+/* Skills section */
+.skills {
+  background-color: #fff;
+  color: #333;
+  padding: 80px 0;
+}
+
+.skills-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px auto 0;
+  width: 80%;
+}
+
+.fa.skill-icons {
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  line-height: 142px;
+  margin-bottom: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+.skill-title {
+  font-size: 2rem;
+  margin: 0 20px 20px;
+}
+
+.skill-desc {
+  line-height: 2;
+  margin: 0 20px;
+}
