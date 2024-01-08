@@ -1,0 +1,170 @@
+/* universal style */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f6f7fb;
+  color: #333;
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.2rem;
+  padding: 30px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+/* header */
+.header {
+  background-color: #fff;
+  text-align: center;
+  width: 180px;
+}
+
+.header .logo {
+  border-radius: 50%;
+  transition: transform 0.5s;
+  height: 136px;
+  width: 136px;
+}
+
+.header .logo:hover {
+  transform: rotate(-360deg);
+}
+
+/* navigation */
+.navi .navi-items {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.navi .navi-items > a {
+  color: #7c5119;
+  display: inline-block;
+}
+
+.navi .navi-items a::after {
+  border-bottom: 1px solid #7c5119;
+  content: "";
+  display: block;
+  margin: 6px auto 0;
+  transition: 0.3s ease-in-out;
+  width: 0%;
+}
+
+.navi .navi-items a:hover::after {
+  width: 100%;
+}
+
+/* grid container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  /* feature property */
+  /* grid-template-rows: masonry; */
+  justify-items: center;
+  row-gap: 8px;
+}
+
+/* tiles */
+.items {
+  background-color: #fff;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  padding: 8px;
+  height: max-content;
+}
+
+.items > a {
+  /* リンクテキストの色を上書き (文字色をitemsに当ててもitemsは以下のaタグの文字色は変わらない) */
+  color: #777;
+  display: block;
+  border-radius: inherit;
+  margin: -8px;
+  padding: 8px;
+  transition: all 0.3;
+}
+
+.items > a:hover {
+  box-shadow: 0 0 6px -1px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+}
+
+.images {
+  display: block;
+  width: 100%;
+}
+
+.items .categories {
+  color: #aaa;
+  font-family: "Trebuchet MS", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  letter-spacing: 1px;
+  margin: 15px 9px 10px;
+}
+
+.categories::before {
+  border: 2px solid;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: -5px;
+  height: 19px;
+  width: 19px;
+}
+
+.items .desc {
+  margin: 10px;
+  line-height: 1.5rem;
+}
+
+.item-main-dish,
+.item-main-dish .categories::before {
+  border-color: #ffc0cb;
+}
+
+.item-appetizer,
+.item-appetizer .categories::before {
+  border-color: #76c047;
+}
+
+.item-column,
+.item-column .categories::before {
+  border-color: #fff100;
+}
+
+.item-break-time,
+.item-break-time .categories::before {
+  border-color: #c1efff;
+}
+
+/* small tile */
+.item-s {
+  grid-row: span 1;
+  width: 180px;
+}
+
+/* medium tile */
+.item-m {
+  grid-column: span 2;
+  width: 364px;
+}
+
+/* large tile */
+.item-l {
+  grid-column: span 4;
+  grid-row: span 2;
+  width: 732px;
+}
