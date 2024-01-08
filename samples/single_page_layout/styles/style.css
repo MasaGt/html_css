@@ -52,7 +52,8 @@ body {
   margin: 10px;
 }
 
-.buttons {
+.buttons,
+.work-buttons {
   background-color: #afa58d;
   border-radius: 4px;
   color: #fff;
@@ -73,14 +74,13 @@ body {
 }
 
 /* about section */
-
 .about {
   background-color: #fff;
   color: #333;
   padding: 80px 30px;
 }
 
-.about-heading {
+.heading {
   position: relative;
   display: inline-block;
   font-size: 4rem;
@@ -88,8 +88,8 @@ body {
   margin: 30px 0 15px;
   padding-bottom: 15px;
 }
-.about-heading::before,
-.about-heading::after {
+.heading::before,
+.heading::after {
   position: absolute;
   right: 0;
   left: 0;
@@ -99,7 +99,7 @@ body {
   display: block;
 }
 
-.about-heading::before {
+.heading::before {
   bottom: 5px;
 }
 
@@ -107,3 +107,87 @@ body {
   margin: 30px 0;
   line-height: 2.5;
 }
+
+/* work section */
+.works {
+  background-color: #383634;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.work-descs .work-buttons {
+  text-decoration: none;
+}
+
+.work-imgs {
+  display: block;
+  width: 100%;
+  margin-bottom: 60%;
+}
+.grid-items {
+  position: relative;
+}
+
+.grid-items::after {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  opacity: 0.2;
+  transform: scaleY(-1);
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.grid-items.tree::after {
+  background-image: url("../images/tree.jpg");
+}
+.grid-items.building::after {
+  background-image: url("../images/building.jpg");
+}
+.grid-items.lake::after {
+  background-image: url("../images/lake.jpg");
+}
+.grid-items.sky::after {
+  background-image: url("../images/sky.jpg");
+}
+
+.work-descs {
+  align-items: center;
+  display: grid;
+  font-size: 1.2rem;
+  line-height: 2;
+  overflow-y: auto;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+.work-descs .work-buttons {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 20px;
+  padding: 3px;
+  width: 60%;
+}
+
+/* In each works at odd numbers, text comes first */
+.grid-items:nth-child(odd) .work-imgs {
+  margin: 60% 0 0;
+}
+.grid-items:nth-child(odd) .work-descs,
+.grid-items:nth-child(odd)::after {
+  top: 0;
+}
+/* In each works at odd numbers, image comes first */
