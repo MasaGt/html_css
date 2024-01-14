@@ -278,3 +278,46 @@ body {
   font-size: 1.2rem;
   padding: 12px 0;
 }
+
+/* responsive design */
+
+@media (width <= 768px) {
+  /* head section */
+  .site-sub-title::after,
+  .site-sub-title::before {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .site-sub-title {
+    font-size: 1.7rem;
+  }
+
+  .site-title {
+    font-size: 5rem;
+    margin-top: 35px;
+  }
+
+  .header {
+    padding-top: 60px;
+  }
+
+  /* cancel opacity change for button hovering*/
+  .buttons:hover {
+    opacity: 1;
+  }
+  .contact-form input[type="submit"]:hover {
+    background-color: transparent;
+  }
+
+  /* about section */
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .about-descs {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+}
