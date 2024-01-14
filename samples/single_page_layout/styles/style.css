@@ -1,0 +1,383 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #151515 url("../images/bg.png") no-repeat fixed left bottom;
+  background-size: cover;
+  color: #fff;
+  font-size: 1.4rem;
+  font-family: "Raleway", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  text-align: center;
+}
+/* header section */
+.header {
+  padding: 170px 30px 80px;
+}
+.site-sub-title {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin: 0 0 30px;
+}
+
+.site-sub-title::before,
+.site-sub-title::after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  margin: 0 30px;
+  vertical-align: middle;
+  height: 2px;
+  width: 140px;
+}
+
+.site-title {
+  font-size: 7.6rem;
+  margin: 50px 0 40px;
+}
+
+.header-desc {
+  color: #888;
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+
+.header-buttons .buttons {
+  margin: 10px;
+}
+
+.buttons,
+.work-buttons {
+  background-color: #afa58d;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 20px;
+  width: 200px;
+}
+
+.buttons:hover {
+  opacity: 0.9;
+}
+
+.button-showy {
+  background-color: #f1b400;
+}
+
+/* about section */
+.about {
+  background-color: #fff;
+  color: #333;
+  padding: 80px 30px;
+}
+
+.heading {
+  position: relative;
+  display: inline-block;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin: 30px 0 15px;
+  padding-bottom: 15px;
+}
+.heading::before,
+.heading::after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid #999;
+  content: "";
+  display: block;
+}
+
+.heading::before {
+  bottom: 5px;
+}
+
+.about-descs {
+  margin: 30px 0;
+  line-height: 2.5;
+}
+
+/* work section */
+.works {
+  background-color: #383634;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.work-descs .work-buttons {
+  text-decoration: none;
+}
+
+.work-imgs {
+  display: block;
+  width: 100%;
+  margin-bottom: 60%;
+}
+.grid-items {
+  position: relative;
+}
+
+.grid-items::after {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  opacity: 0.2;
+  transform: scaleY(-1);
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.grid-items.tree::after {
+  background-image: url("../images/tree.jpg");
+}
+.grid-items.building::after {
+  background-image: url("../images/building.jpg");
+}
+.grid-items.lake::after {
+  background-image: url("../images/lake.jpg");
+}
+.grid-items.sky::after {
+  background-image: url("../images/sky.jpg");
+}
+
+.work-descs {
+  align-items: center;
+  display: grid;
+  font-size: 1.2rem;
+  line-height: 2;
+  overflow-y: auto;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+}
+
+.work-descs .work-buttons {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 20px;
+  padding: 3px;
+  width: 60%;
+}
+
+/* In each works at odd numbers, text comes first */
+.grid-items:nth-child(odd) .work-imgs {
+  margin: 60% 0 0;
+}
+.grid-items:nth-child(odd) .work-descs,
+.grid-items:nth-child(odd)::after {
+  top: 0;
+}
+
+/* Skills section */
+.skills {
+  background-color: #fff;
+  color: #333;
+  padding: 80px 0;
+}
+
+.skills-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px auto 0;
+  width: 80%;
+}
+
+.fa.skill-icons {
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  line-height: 142px;
+  margin-bottom: 30px;
+  height: 150px;
+  width: 150px;
+}
+
+.skill-title {
+  font-size: 2rem;
+  margin: 0 20px 20px;
+}
+
+.skill-desc {
+  line-height: 2;
+  margin: 0 20px;
+}
+
+/* contact section */
+.contact {
+  padding: 80px 0 150px;
+}
+
+.contact-form {
+  margin: 50px auto 0;
+  width: 50%;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0; /* to reset browser's default border-radius */
+  color: #fff;
+  display: block;
+  outline: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5) inset;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: block;
+  padding: 15px;
+  margin: 40px auto 0;
+  width: 200px;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer {
+  font-size: 1.2rem;
+  padding: 12px 0;
+}
+
+/* responsive design */
+/* for mobile phones */
+@media (width <= 768px) {
+  /* head section */
+  .site-sub-title::after,
+  .site-sub-title::before {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+
+  .site-sub-title {
+    font-size: 1.7rem;
+  }
+
+  .site-title {
+    font-size: 5rem;
+    margin-top: 35px;
+  }
+
+  .header {
+    padding-top: 60px;
+  }
+
+  /* cancel opacity change for button hovering*/
+  .buttons:hover {
+    opacity: 1;
+  }
+  .contact-form input[type="submit"]:hover {
+    background-color: transparent;
+  }
+
+  /* about section */
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .about-descs {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  /* work section */
+  .work-imgs {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .work-descs {
+    position: relative;
+    top: 0;
+    height: 100%;
+  }
+
+  .grid-items::after {
+    top: 0;
+    height: 100%;
+    background-size: cover;
+  }
+
+  /* skill section */
+  .skills-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skilld-grid-items {
+    margin: 40px auto 0;
+  }
+
+  .skilld-grid-items:last-child {
+    margin-bottom: 40px;
+  }
+
+  .fa.skill-icons {
+    height: 100px;
+    width: 100px;
+    font-size: 5rem;
+    line-height: 92px;
+  }
+
+  .skill-desc {
+    margin: 0;
+  }
+
+  /* contact section */
+  .contact {
+    padding-bottom: 80px;
+  }
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* for tablets */
+@media (width <= 1024px) {
+  body {
+    background-image: none;
+  }
+}

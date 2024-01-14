@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Single Page Layout</title>
+    <!-- ↓web font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ↑web font -->
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- ↓font awesome -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- ↑font awesome -->
+  </head>
+  <body>
+    <header class="header">
+      <p class="site-sub-title">Web designre's portfolio</p>
+      <h1 class="site-title">HI, MY NAME IS...</h1>
+      <p class="header-desc">Check out some of my works.</p>
+      <div class="header-buttons">
+        <a href="#about" class="buttons">LEARN MORE</a>
+        <a href="#contact" class="buttons button-showy">SEND MESSAGE</a>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <h2 class="heading">ABOUT ME</h2>
+      <p class="about-descs">
+        はじめまして。日本でWebデザイナーをしています。<br />
+        デザインの専門学校を卒業し、制作会社での実務経験を経て、現在はフリーランスとして働いています。
+      </p>
+      <p class="about-descs">
+        このサイトは「HTML/CSモダンコーディング」という書籍のサンプルとして作られた、架空のWebデザイナーのポートフォリオサイトです。<br />
+        このサンプルのようなサイトを1から作る過程を通して、HTMLとCSSの実践的なコーディングノウハウを学ぶことができます。
+      </p>
+    </section>
+    <section class="works">
+      <h2 class="heading">WORKS</h2>
+      <div class="grid-container">
+        <div class="grid-items tree">
+          <img class="work-imgs" src="./images/tree.jpg" alt="作成事例1" />
+          <div class="work-descs">
+            <p>
+              ひとつめの作成事例が入ります。<br />
+              簡単な説明が入ります<br />
+              使用ツール: XXX, XXX, XXX<br />
+              <a href="#" class="work-buttons">READ MORE</a>
+            </p>
+          </div>
+        </div>
+        <div class="grid-items building">
+          <img class="work-imgs" src="./images/building.jpg" alt="作成事例2" />
+          <div class="work-descs">
+            <p>
+              ふたつめの作成事例が入ります。<br />
+              簡単な説明が入ります<br />
+              使用ツール: XXX, XXX, XXX<br />
+              <a href="#" class="work-buttons">READ MORE</a>
+            </p>
+          </div>
+        </div>
+        <div class="grid-items lake">
+          <img class="work-imgs" src="./images/lake.jpg" alt="作成事例3" />
+          <div class="work-descs">
+            <p>
+              みっつめの作成事例が入ります。<br />
+              簡単な説明が入ります<br />
+              使用ツール: XXX, XXX, XXX<br />
+              <a href="#" class="work-buttons">READ MORE</a>
+            </p>
+          </div>
+        </div>
+        <div class="grid-items sky">
+          <img class="work-imgs" src="./images/sky.jpg" alt="作成事例4" />
+          <div class="work-descs">
+            <p>
+              よっつめの作成事例が入ります。<br />
+              簡単な説明が入ります<br />
+              使用ツール: XXX, XXX, XXX<br />
+              <a href="#" class="work-buttons">READ MORE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <h2 class="heading">SKILLS</h2>
+      <div class="skills-grid-container">
+        <div class="skilld-grid-items">
+          <i class="fa fa-lightbulb-o skill-icons"></i>
+          <div class="skill-title">IDEA</div>
+          <p class="skill-desc">
+            何かを考えることは好きです。<br />
+            新しいことを思いついては試しています。<br />
+            ディレクションの経験もあります。
+          </p>
+        </div>
+        <div class="skilld-grid-items">
+          <i class="fa fa-paint-brush skill-icons"></i>
+          <div class="skill-title">DESIGN</div>
+          <p class="skill-desc">
+            見た目の綺麗さだけじゃなくて、<br />
+            使いやすさ、情報の伝わりやすさなど、<br />
+            その先まで考えることを意識しています。
+          </p>
+        </div>
+        <div class="skilld-grid-items">
+          <i class="fa fa-code skill-icons"></i>
+          <div class="skill-title">CODING</div>
+          <p class="skill-desc">
+            HTML/CSSコーディングも行います。<br />
+            正しく美しいマークアップと、<br />
+            今後の変更への強さを考慮しています。
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <h2 class="heading">CONNTACT</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="NAME" />
+        <textarea name="message" placeholder="MESSAGE"></textarea>
+        <input type="submit" value="SEND" />
+      </form>
+    </section>
+    <footer class="footer">© sample site</footer>
+  </body>
+</html>
