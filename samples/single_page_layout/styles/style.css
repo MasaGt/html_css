@@ -280,7 +280,7 @@ body {
 }
 
 /* responsive design */
-
+/* for mobile phones */
 @media (width <= 768px) {
   /* head section */
   .site-sub-title::after,
@@ -364,5 +364,20 @@ body {
 
   .skill-desc {
     margin: 0;
+  }
+
+  /* contact section */
+  .contact {
+    padding-bottom: 80px;
+  }
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* for tablets */
+@media (width <= 1024px) {
+  body {
+    background-image: none;
   }
 }
