@@ -1,0 +1,6 @@
+@use "./variable.scss";
+
+body {
+  background: variable.$black;
+  color: variable.$white;
+}
