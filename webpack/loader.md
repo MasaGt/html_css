@@ -14,91 +14,45 @@
 
 ### 主なローダー
 
-- babel-loader
+- [babel-loader](./babel-loader.md)
     - jsやjsxファイルのトランスパイルのためのローダー
-    - そのほかに必要なモジュール
-        - @babel/core: babel本体
-        - @babel/preset-env: babelが変換処理に使うプラグインのプリセット
 
-*@babel/preset-envについて:  
-babelは以下の処理でトランスパイルを行う
-1. jsファイルを解析
-2. 解析したファイルをASTに変換
-3. ASTに何らかの変換処理を行う
-4. ASTをjsファイルに変換  
+- [css-loader](./css-loader.md)
+    - cssをjsファイルに埋め込むためのローダー
 
-手順3の際に変換処理に何も指定しなければ、トランスパイルは行われず、元のjsファイルが出力される  
-babel/preset-envとは、ターゲットのブラウザ情報などから(細かく変換処理の指定をしなくても)変換処理に必要なプラグインを決めてくれるプラグインのプリセット
+- [style-loader]()
+    - cssをhtmlのスタイルタグとして変換して出力するローダー
+    - cssはビルドファイルに含めなくてよくなる　
+    - htmlファイルが肥大化するので、デメリットもある
 
----
+- [sass-loader]()
+    - sassをcssに変換するためのローダー
+    - sass-loaderを使うためにはsass(Dart Sass)かnode-loaderのインストールも必要  
+        *Dart Sass: Sassをコンパイルするためのモジュール
+    - node-sassは非推奨らしい
+    - sass-loaderはSassをコンパイルするためのモジュールを利用するローダーのイメージ?(babel-loaderもbabel_core必要だったし)
 
-### webpack/config.jsにbabel-loaderの登録
-
-- babel-loaderおよびbabel関連のモジュールをインストールしただけでは意味がない
-
-- webpack.config.jsにbabel-loaderを使いますよという旨の記述をする必要がある
-
-```js
-module.exports = {
-    module: {
-        rules: [ //ローダーの登録ごとに{}でくくる
-            {
-                use: "babel-loader", //ローダー名
-                test: /\.js$/, //処理対象ファイルの拡張子
-                include: , //処理対象フォルダ
-                exclude: , //処理対象外フォルダ(基本的にincludeの方を使う)
-            },
-        ]
-    }
-};
-```
-*testの設定値は正規表現を使っている。$は文末を意味する。
-
-**これだけではまだ不充分。<font color="red">変換処理に使うプラグインを指定していないから</font>**
 
 ---
 
-### 変換に使うプラグインの指定
+### ローダーの使い方
 
-- 2つ方法がある
-    1. webpack.config.jsに記載する
-    2. .babelrc(babel.config.js)に記載する
-
-<br>
-
-例: webpack.config.jsに記載する場合
 ```js
 module.exports = {
-    ..
     module: {
         rules: [
+            // ここに{}でローダーごとの設定をくくる
             {
-                use: "babel-loader"
-                options: { //ここでpresetsプロパティに設定する
-                    presets: ["@babel/preset-env"]
-                }
+                use: "ローダー名",
+                test: 対象ファイル(正規表現で拡張子を指定するのが一般的),
+                include: 対象パス                
+            },
+            {
+                // 別のローダーの設定
             }
         ]
     }
 }
-```
-
-<br>
-
-例: .babelrcに記載する方法
-```
-{
-    "presets": ["@babel/preset-env"]
-}
-```
-
-<br>
-
-例: babel.config.jsに記載する方法
-```js
-module.exports = {
-    presets: ["@babel/preset-env"],
-};
 ```
 
 ---
@@ -122,5 +76,24 @@ module.exports = {
             },
         ],
     },
+};
+```
+
+<br>
+
+- 複数のローダーの使い方
+    - 複数のローダーを使う際はmodule.rules.useに配列で渡す  
+    *実行順は渡した能登は逆の順番で実行される  
+    今回の例だとloader3 -> loader2 -> loader1の順で実行される
+
+```js
+module.exports = {
+    module: {
+        rules: [
+            {
+                use: ["loader1", "loader2", "loader3"],
+            }
+        ]
+    }
 };
 ```
