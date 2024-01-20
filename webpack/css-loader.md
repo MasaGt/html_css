@@ -4,9 +4,11 @@
 
 - ここに書くのは、css-loader/style-loader/sass-loaderについてのみ
 
+- post-css-loaderについても追記
+
 ---
 
-### 設定方法
+### style-loader/css-loader/sacc-loaderの設定方法
 
 - ポイント  
     - ローダーの実行順が大切  
@@ -44,3 +46,23 @@ module.exports = {
 
 - css-loderでcssファイルをモジュール化して、アウトプットしたjsファイルをhtmlで読み込んでも、スタイルは反映されない  
     ->style-loaderでモジュール化したスタイルをstyleタグでhtmlに埋め込めるように処理しないといけない。
+
+---
+
+### post-css-loaderの使い方
+
+- ローダーの実行順に注意
+
+```js
+module.exports = {
+    module: {
+        rules: [
+            {
+                use: ["style-loader", "css-loader", "postcss-loader"],
+                test: ~,
+                include: ~,
+            }
+        ]
+    }
+};
+```
