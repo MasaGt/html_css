@@ -66,3 +66,13 @@ module.exports = {
     }
 };
 ```
+
+---
+
+### cssをjsファイルから読み込む方法
+
+```js
+import "~~/~~/~.css";
+```
+*この方法は基本的にwebpackでしか使えないものと思っていい  
+*ちなみに、importで画像ファイルやcssファイルを読み込むこと自体はECMAScriptの仕様違反ではないらしい -> [参考](https://blog.uhy.ooo/entry/2020-06-06/webpack-loader-spec-compliance/)
