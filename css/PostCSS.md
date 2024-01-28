@@ -25,7 +25,7 @@ Stringifier: ASTをcssに変換
 
 - autoprefixer
     - ベンダープレフィックスが必要な項目に自動で付与してくれるプラグイン
-    - npm insyall -D autoprefixerを行う必要がある
+    - npm install -D autoprefixerを行う必要がある
 
 - postcss-nested / postcss-nesting
     - cssの記法で入れ子が実現できる
