@@ -1,0 +1,13 @@
+$white: #fff;
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  color: $white;
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+}

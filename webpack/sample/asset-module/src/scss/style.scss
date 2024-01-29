@@ -1,0 +1,23 @@
+$black: #000000;
+$white: #ffffff;
+
+body {
+  background: $black;
+  color: $white;
+}
+
+h1 {
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+
+  &:before {
+    background: url("../images/icon.png") no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    margin-right: 5px;
+    height: 18px;
+    width: 18px;
+  }
+}
