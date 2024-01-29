@@ -72,7 +72,7 @@ module.exports = {
 
 ### 主なプラグイン
 
-- [webpack-merge]()
+- [webpack-merge](./webpack-merge.md)
     - webpackの設定ファイルに関するプラグイン
         複数の設定ファイル(開発用/本番用などに)分け、ビルド時に分割された設定ファイルをマージしたりすることができる
 
@@ -81,5 +81,7 @@ module.exports = {
     - style-loaderのようなcssローダーはcssをjsファイルとして出力するので、そこが異なる点
     *バンドルファイルからcss部分を出力するので、cssをjsにバンドルするcss-loaderと一緒に使う
 
-- webpack-bundle-analyzer:
+- [webpack-bundle-analyzer](./webpack-bundle-analyzer.md)  
+    - バンドルされたファイルが使っている各ライブラリのサイズを可視化してくれる
+
 
