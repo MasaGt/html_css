@@ -42,11 +42,13 @@ module.exports = {
 
 - asset/source: 静的ファイルをテキストとして出力するオプション
 
-- asset: 静的ファイルをデータURLに変換するか別フォルダにそのまま出力するかを自動で選択する
+- asset: 静的ファイルをデータURLに変換するか別フォルダにそのまま出力するかを自動で選択する  
+    例:一定のサイズ以下はインライン化して、それ以上のサイズの静的ファイルはバンドルせずに出力する  
+    *このオプションを選択した場合、generatorとデータURL変換するしないの条件を決める必要がある
 
 ---
 
-### asset/resource
+### type: "asset/resource"
 
 - generatorオプション: 静的ファイルの出力先や、出力ファイル名などを決めるオプション
 
@@ -70,6 +72,38 @@ module.exports = {
 *filenameについて  
 [name]はバンドル前のファイル名、  
 [ext]はバンドル前の拡張子  
+
+---
+
+### type: "asset"
+
+- generator: 静的ファイル出力する際のファイル名
+
+- parser: 静的ファイルをバンドル化するしないの条件などを設定する
+
+```js
+module.exports = {
+    module: [
+        rules: [
+            {
+                type: "asset",
+                test: /対象拡張子/,
+                generaor: {
+                    filename: ファイルネーム,
+                },
+                parser: {
+                    dataUrlCondition: {
+                        //4KB以上のファイルはバンドル化せず出力する
+                        maxSize: 1024 * 4, 
+                    }
+                }
+            },
+        ],
+    ],
+};
+```
+*parser.daraUrlCondition: データURL変換する条件を設定するオプション  
+*daraUrlCondition.maxSize: データURL変換対象の最大ファイルサイズ(多分デフォルトの単位はbyte)
 
 ---
 
