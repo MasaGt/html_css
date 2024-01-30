@@ -1,0 +1,1 @@
+(()=>{"use strict";var o;console.log((o=10)*o)})();
