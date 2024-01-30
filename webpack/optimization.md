@@ -170,3 +170,31 @@ module.exports = {
     }
 }
 ```
+
+---
+
+### なぜpakcge.jsonのsideEffectsに指定してなくてもtree shakingできなかったのか
+
+- 以下のような状況でmath.jsのMath.randomがtree shakingされなかった理由
+
+
+```js
+//math.js
+export const square = () => {~};
+export const cube = () => {~};
+export const random = Math.random();
+```
+
+<br>
+
+```js
+// app.js
+import { cube } from "math.jsのパス"
+```
+
+- app.jsでmath.jsのcubeは読み込まれているため、math.jsは普通に読み込まれるため、randomだけ除去することができないらしい  
+[参考サイト:4. ES6 の class を tree shaking する 2 つの方法](https://www.kabuku.co.jp/developers/tree-shaking-in-2018)
+
+- やはり、このような場合はterser-webpack-pluginを使って除去するのが正しかったらしい
+
+
