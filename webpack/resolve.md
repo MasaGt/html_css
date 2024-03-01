@@ -15,7 +15,7 @@
 module.exports = {
     ~
     resolve: {
-        extensions: [".js". ".jsx"],
+        extensions: [".js", ".jsx"],
     }
 }
 ```
@@ -37,8 +37,8 @@ import { インポート対象 } from "(jsかjsxの)対象ファイル";
 module.exports = {
     resolve: {
         alias: {
-            エイリアス名1: パス1,
-            エイリアス名2: パス2,
+            "エイリアス名1": パス1,
+            "エイリアス名2": パス2,
         }
     }
 };
@@ -58,7 +58,7 @@ project
 module.exports = {
     resolve: {
         alias: {
-            @img: path.resolve(__dirname, "image"),
+            "@img": path.resolve(__dirname, "image"),
         }
     }
 };
