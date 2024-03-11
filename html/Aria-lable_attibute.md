@@ -73,3 +73,68 @@
     <p aria-lable="VoiceOver時はこっちも読み上げられる">テキスト(VoiceOver時も読み上げられる)</p>
 </body>
 ```
+
+---
+
+### aria-describedby 属性とは
+
+- aria-describedby が指定されている要素の解説を行っている要素を指定できる属性
+    - aria-describedby には、その要素を解説している要素の id 名を渡す
+
+- 下記の例では、 p 要素は button 要素の説明をしている
+    - button 要素の aria-describedby に p 要素の id を指定することで、 p 要素は button 要素の解説をしていると関連づけることができる
+```html
+<button aria-describedby="button-desc">submit</button>
+<p id="button-desc">submit the form to create an user account</p>
+```
+
+---
+
+### aria-live 属性とは
+
+- aria-live を指定した要素に動的な更新があったとき、スクリーンリーダーに読み上げよう伝える機能
+
+- 主な使い所としては、フォームのエラー項目に aria-live を指定する
+    - バリデーションチェックが失敗し、クライアント側でエラー項目を動的に設定した場合、読み上げの対象になる
+
+- aria-live に指定できるのは以下の3つの値
+    - "off": 要素が更新されても、ユーザーに伝達しない=読み上げられない
+    - "polite": ユーザーの操作がアクティブでは無いタイミングなどにユーザーに伝達する
+    - "assertive": 要素が更新されたら即座にユーザーに伝達する
+
+```htlm
+<form>
+    <input
+        type="number"
+    />
+
+    <!-- このdiv要素が更新されたらユーザーに伝達される -->
+    <div
+        class="input-error"
+        aria-live="polite"
+    >
+        please input only numbers
+    </div>
+
+    <button type="submit">submit</button>
+</form>
+```
+
+---
+
+### aria-atomic 属性とは
+
+- aria-atomic を指定した要素が更新された時、更新箇所だけユーザーに伝達するのではなく、** aria-atomic を指定した要素の子要素も伝達するよう**指定する機能
+
+- aria-atomic には以下の2つの値を指定できる
+    - true: aria-atomic を指定した要素の全体をユーザーに伝達する
+    - false: 変更箇所のみユーザーに指定する
+
+```html
+<div aria-atomic="true">
+    <h1>Title</h1>
+
+    <!-- もしlabel要素が更新された場合、div要素全体を更新箇所としてユーザーに伝達する -->
+    <label>message</label>
+<div>
+```
