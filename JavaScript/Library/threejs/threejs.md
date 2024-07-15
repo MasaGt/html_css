@@ -8,9 +8,10 @@ Webブラウザ上で3Dグラフィックスを描画するためのライブラ
 
 実際に three.js を利用して 3D オブジェクトを web ページに表示するには、以下の操作が必要になってくる
 - シーン(場、背景)を準備する
-- カメラを設定してシーンに配置する
+- カメラを設定する
 - ライトを設定してシーンに配置する
 - オブジェクト（被写体）を設定してシーンに配置する
+- レンダラーにシーンとカメラを渡し、カメラが写すシーンを描画する
 
 <img src="./img/concept.png" />
 
@@ -29,8 +30,8 @@ Webブラウザ上で3Dグラフィックスを描画するためのライブラ
 sceneオブジェクトは表示したいすべての物体(オブジェクト)と利用したい全ての光源(ライト)、カメラを保持して変更を監視するコンテナオブジェクト
 
 - new THREE.Scene() で Scene オブジェクトを作成する
-- add() でオブジェクトやカメラ、ライトをシーンに追加する
-- 他にも remove でシーンから被写体やカメラ、ライトの削除、 getObjectByName で名前を指定してシーンに配置されたオブジェクトを取得できたりする
+- add() でオブジェクトやライトをシーンに追加する
+- 他にも remove でシーンから被写体やライトの削除、 getObjectByName で名前を指定してシーンに配置されたオブジェクトを取得できたりする
 
 ```js
 // シーンオブジェクトの作成
@@ -93,6 +94,18 @@ OrthographicCamera の使い方
 ```js
 const camera = new TRHEE.OrthographicCamera(left, right, top, bottom, near, far);
 ```
+
+<br>
+
+カメラの向きを設定する
+- cameraインスタンス.position.x / y / z でカメラの向きを調整し、 cameraインスタンス.lookAt() で scene の座標原点を向かせることができる
+```js
+camera.position.x = -30;
+camera.position.y = 40;
+camera.position.z = 30;
+camera.lookAt(scene.position);
+```
+
 <br>
 <br>
 
@@ -107,6 +120,8 @@ const camera = new TRHEE.OrthographicCamera(left, right, top, bottom, near, far)
 ### Light とは
 
 シーン内に配置される光源。
+
+ライトオブジェクト作成後は sceneインスタンス.add()でシーンに追加する
 
 **ライトの種類**
 - AmbientLight: 3D空間全体に均等に光を当てるライト
@@ -172,3 +187,30 @@ scene.add(mesh);
 ### レンダラーとは
 
 カメラが撮影している 3D のシーンを canvas に描画するための機能
+
+レンダラーの作成
+- コンストラクターには引数として、HTMLに配置したcanvas要素を指定する
+- renderer.setPixelRatio(pixelRatio) でレンダラーのピクセル比をデバイスのピクセル比にする
+- renderer.setSize(width, height) でレンダラーのサイズ (描画域の大きさ)を指定する
+
+```js
+// レンダラーの作成
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector('#canvas')
+});
+
+// ウィンドウのアスペクト比とレンダラーのピクセル比を同じに設定
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// 描画域とウィンドウのサイズを同じに設定
+renderer.setSize(window.innerWidth, window.innerHeight)
+```
+
+<br>
+
+renderメソッドに scene インスタンスと camera インスタンスを渡すことで、canvas 要素にカメラが捉えている scene を描画することができる
+
+```js
+// レンダリング
+renderer.render(scene, camera);
+```

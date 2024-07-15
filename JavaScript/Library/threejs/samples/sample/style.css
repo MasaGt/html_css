@@ -1,0 +1,18 @@
+#myCanvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 0%;
+  height: 0%;
+}
