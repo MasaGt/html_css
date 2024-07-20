@@ -1,5 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import vshader from "./shader/vshader.glsl";
+import fshader from "./shader/fshader.glsl";
 
 /**
  * Sizes
@@ -23,8 +25,23 @@ const scene = new THREE.Scene();
 // Geometry
 const geometry = new THREE.PlaneGeometry(1, 1, 32, 32);
 
+// geometryを構成する頂点の個数の取得
+const count = geometry.attributes.position.count;
+const randoms = new Float32Array(count);
+
+for (let i = 0; i < count; i++) {
+  randoms[i] = Math.random();
+}
+
+geometry.setAttribute("aRandom", new THREE.BufferAttribute(randoms, 1));
+
+console.log(geometry);
+
 // Material
-const material = new THREE.MeshBasicMaterial();
+const material = new THREE.RawShaderMaterial({
+  vertexShader: vshader,
+  fragmentShader: fshader,
+});
 
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
