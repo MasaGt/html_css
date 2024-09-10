@@ -43,10 +43,10 @@
 **正方行列**
 - 行と列の数が等しい行列
 $$
-\begin{pmatrix}
-a & b\\
-c & d
-\end{pmatrix}
+    \begin{pmatrix}
+    a & b \\
+    c & d
+    \end{pmatrix}
 $$
 
 <br>
