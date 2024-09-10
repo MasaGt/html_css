@@ -265,6 +265,7 @@ A・B = B・A
 <br>
 
 例: 以下の行列A、Bにおいて、 AB ≠ BA が成り立たないことを確認する
+
 $$
 A = \begin{pmatrix}1 & 2 \\ 1 & 1\end{pmatrix}, B= \begin{pmatrix}1 & 1 \\ 2 & -1\end{pmatrix}
 $$
