@@ -42,12 +42,13 @@
 
 **正方行列**
 - 行と列の数が等しい行列
-$$
-\begin{pmatrix}
-a & b\\
-c & d
-\end{pmatrix}
-$$
+
+    $$
+    \begin{pmatrix}
+        a & b \\
+        c & d \\
+    \end{pmatrix}
+    $$
 
 <br>
 
@@ -265,6 +266,7 @@ A・B = B・A
 <br>
 
 例: 以下の行列A、Bにおいて、 AB ≠ BA が成り立たないことを確認する
+
 $$
 A = \begin{pmatrix}1 & 2 \\ 1 & 1\end{pmatrix}, B= \begin{pmatrix}1 & 1 \\ 2 & -1\end{pmatrix}
 $$
