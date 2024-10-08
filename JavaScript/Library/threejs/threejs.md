@@ -144,7 +144,7 @@ camera.lookAt(scene.position);
 
 参考サイト
 
-[https://gmo-miyazaki-creators.com/coding/three-js-01/](https://gmo-miyazaki-creators.com/coding/three-js-01/)
+[【three.js入門・第1回】three.jsの基本的な要素](https://gmo-miyazaki-creators.com/coding/three-js-01/)
 
 各ライトの違いについて: [Three.js ライト機能まとめ](https://ics.media/tutorial-three/light_variation/)
 
