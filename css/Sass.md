@@ -39,7 +39,8 @@
 }
 ```
 
-```SCSS
+```scss
+/* SCSS */
 .paragraph {
     font-size: 16px;
     .min-text { // ここが入れ子になっている
@@ -48,7 +49,8 @@
 }
 ```
 
-```Sass
+```sass
+// SASS
 paragraph
     font-size: 16px
     .min-text
